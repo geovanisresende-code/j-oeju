@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>João Pedro & Juliana</title>
+
+<meta property="og:title" content="João Pedro & Juliana">
+<meta property="og:description" content="Site do nosso casamento. Veja detalhes, fotos e informações do grande dia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seusite.com">
+<meta property="og:image" content="https://seusite.com/assets/preview.jpg">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cormorant Garamond', serif;
+    color:#4F5D44;
+
+    background: url("assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+
+    padding-top:80px; 
+}
+
+
+/* NAV */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:center;   /* centraliza horizontal */
+    align-items:center;       /* centraliza vertical */
+    padding:25px 0;
+
+    background: url("assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+
+    border-bottom: 2px solid #4F5D44;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+
+    font-size:13px;
+    letter-spacing:2px;
+    z-index:1000;
+
+    position:fixed;
+}
+
+
+
+
+
+
+nav a{
+    margin:0 25px;
+    text-decoration:none;
+    color:#4F5D44;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#6E7F5F;
+}
+
+/* BOTÃO HAMBURGUER */
+.menu-toggle {
+    display:none;
+
+    font-size:28px;
+    cursor:pointer;
+    color:#4F5D44;
+}
+
+
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+ nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: url("assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centraliza vertical */
+    align-items: center;      /* centraliza horizontal */
+
+    padding: 20px 0;
+    display: none;
+    border-bottom: 1px solid #4F5D44;
+}
+
+
+    nav a{
+        margin:15px 0;
+        font-size:14px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+.hero{
+    text-align:center;
+    padding-top:40px;
+    margin-top: 60px;
+}
+  
+
+
+}
+
+
+/* HERO SECTION */
+
+.hero{
+    text-align:center;
+    padding-top:20px;
+}
+
+.names{
+    font-family:'Great Vibes', cursive;
+    font-size:48px;
+    color:#6E7F5F;
+    margin-bottom:5px;
+    padding: 0px -5px;
+    padding-top:-30px
+    
+}
+
+/* Container da máscara */
+.hero .mask {
+    width: 550px;       /* tamanho da imagem */
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50%; /* círculo perfeito */
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1); /* borda suave */
+}
+
+.hero .mask img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%; /* garante que a imagem siga o círculo */
+    padding: 10px 0px;
+}
+
+
+
+
+
+
+/* MESSAGE */
+
+.message{
+    max-width:500px;
+    margin:0 auto;
+    text-align:center;
+    font-size:17px;
+    line-height:1.8;
+    padding: 20px 20px;
+    padding-top:80px;
+}
+
+.message h3{
+    margin:20px 0 20px 0;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+/* COUNTDOWN */
+
+.countdown-wrapper{
+    text-align:center;
+    margin:60px 0 100px 0;
+}
+
+.countdown-title{
+    font-size:14px;
+    letter-spacing:2px;
+    margin-bottom:40px;
+}
+
+.countdown{
+    background:#6E7F5F;
+    display:inline-block;
+    padding:18px 40px;
+    color:white;
+    letter-spacing:4px;
+    font-size:18px;
+    margin-bottom:80px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:13px;
+    border-top:1px solid #ddd7cc;
+}
+
+
+
+/* GALERIA */
+
+.gallery-section{
+    padding:120px 80px;
+    display:flex;
+    justify-content:center;
+}
+
+.gallery-container{
+    position:relative;
+    width:80%;
+    max-width:1100px;
+    display:flex;
+    align-items:center;
+}
+
+.gallery{
+    display:flex;
+    gap:20px;
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+
+.gallery img{
+    width:300px;
+    height:420px;
+    object-fit:cover;
+    flex-shrink:0;
+    border-radius:4px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-container{
+    position:relative;
+    width:80%;
+    max-width:1100px;
+    display:flex;
+    align-items:center;
+
+    background:#6E7F5F;
+    padding:40px;
+    border-radius:10px;
+}
+
+
+/* SETAS */
+
+.arrow{
+    background:rgba(255,255,255,0.8);
+    border:none;
+    font-size:28px;
+    cursor:pointer;
+    padding:10px 15px;
+    position:absolute;
+    z-index:10;
+    transition:.3s;
+
+    color:#6E7F5F; 
+}
+
+
+.arrow:hover{
+    background:#6E7F5F;
+    color:white;
+}
+
+.left{
+    left:-50px;
+}
+
+.right{
+    right:-50px;
+}
+
+/* LOCATION SECTION */
+
+.location-section{
+    padding:120px 20px;
+    text-align:center;
+   
+    backdrop-filter: blur(4px);
+}
+
+.location-container{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.location-title{
+    letter-spacing:3px;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+.location-date{
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:30px;
+}
+
+.location-place{
+    font-family:'Great Vibes', cursive;
+    font-size:40px;
+    color:#6E7F5F;
+    margin-bottom:20px;
+}
+
+.location-address{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.location-button{
+    display:inline-block;
+    padding:14px 40px;
+    background:#6E7F5F;
+    color:white;
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.location-button:hover{
+    background:#6E7F5F;
+}
+
+/* DRESSCODE SECTION */
+
+.dresscode-section{
+    padding:140px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.dresscode-card{
+    position:relative;
+    max-width:900px;
+    width:90%;
+    background:#f8f6f2;
+    padding:80px 60px;
+    border:1px solid #6E7F5F;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* Moldura interna dourada */
+.dresscode-card::after{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:1px solid #6E7F5F;
+    pointer-events:none;
+}
+
+.floral-detail{
+    position:absolute;
+    top:-40px;
+    left:-40px;
+    width:120px;
+    opacity:0.9;
+}
+
+.dresscode-content{
+    text-align:center;
+}
+
+.dresscode-script{
+    font-family:'Great Vibes', cursive;
+    font-size:42px;
+    color:#6E7F5F;
+    margin-bottom:10px;
+}
+
+.dresscode-subtitle{
+    letter-spacing:3px;
+    font-size:14px;
+    margin-bottom:40px;
+}
+
+.dresscode-block{
+    margin-bottom:30px;
+}
+
+.dresscode-block h3{
+    letter-spacing:2px;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.dresscode-block p{
+    font-size:15px;
+    line-height:1.8;
+    max-width:600px;
+    margin:0 auto;
+}
+
+.dresscode-illustration{
+    margin-top:40px;
+    max-width:400px;
+    width:80%;
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+
+    .dresscode-card{
+        padding:60px 30px;
+    }
+
+    .dresscode-script{
+        font-size:34px;
+    }
+
+    .floral-detail{
+        width:80px;
+        top:-25px;
+        left:-25px;
+    }
+}
+
+/* PRÉ-WEDDING BANNER */
+
+.prewedding-banner{
+    background:#4F5D44;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.prewedding-banner::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    border-top:4px solid #a8b89a;
+    border-bottom:4px solid #a8b89a;
+    pointer-events:none;
+}
+
+.prewedding-tag{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,0.5);
+    padding:6px 20px;
+    letter-spacing:3px;
+    font-size:11px;
+    margin-bottom:20px;
+    opacity:0.85;
+}
+
+.prewedding-title{
+    font-family:'Great Vibes', cursive;
+    font-size:54px;
+    color:#d4e0cc;
+    margin-bottom:15px;
+    line-height:1.1;
+}
+
+.prewedding-date{
+    font-size:18px;
+    letter-spacing:4px;
+    margin-bottom:8px;
+    font-weight:300;
+}
+
+.prewedding-local{
+    font-family:'Great Vibes', cursive;
+    font-size:36px;
+    color:#d4e0cc;
+    margin-bottom:20px;
+}
+
+.prewedding-call{
+    font-size:14px;
+    letter-spacing:2px;
+    opacity:0.85;
+    max-width:500px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+    .prewedding-title{ font-size:40px; }
+    .prewedding-local{ font-size:28px; }
+    .prewedding-date{ font-size:15px; letter-spacing:2px; }
+}
+
+/* GIFTS SECTION */
+
+.gifts-section{
+    padding:140px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.gifts-card{
+    position:relative;
+    max-width:900px;
+    width:90%;
+    background:#f8f6f2;
+    padding:80px 60px;
+    border:1px solid #6E7F5F;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* Moldura interna */
+.gifts-card::after{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:1px solid #6E7F5F;
+    pointer-events:none;
+}
+
+.gifts-content{
+    text-align:center;
+}
+
+.gifts-script{
+    font-family:'Great Vibes', cursive;
+    font-size:42px;
+    color:#6E7F5F;
+    margin-bottom:15px;
+}
+
+.gifts-subtitle{
+    letter-spacing:3px;
+    font-size:13px;
+    margin-bottom:30px;
+}
+
+.gifts-text{
+    font-size:15px;
+    line-height:1.8;
+    max-width:550px;
+    margin:0 auto 40px auto;
+}
+
+/* Cards das lojas */
+.gifts-stores{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.gifts-store-card{
+    background:#fff;
+    border:1px solid #6E7F5F;
+    padding:0;
+    text-align:center;
+    text-decoration:none;
+    color:#4F5D44;
+    transition:.3s;
+    display:block;
+    overflow:hidden;
+}
+
+.gifts-store-card:hover{
+    background:#6E7F5F;
+    color:white;
+    transform:translateY(-5px);
+}
+
+.gifts-store-card:hover .gifts-store-img{
+    opacity:0.85;
+}
+
+.gifts-store-img{
+    width:100%;
+    height:140px;
+    object-fit:contain;
+    background:#fff;
+    padding:10px;
+    display:block;
+    transition:.3s;
+}
+
+.gifts-store-info{
+    padding:18px 15px;
+}
+
+.gifts-store-info h4{
+    font-size:15px;
+    letter-spacing:1px;
+    margin-bottom:6px;
+}
+
+.gifts-store-info p{
+    font-size:12px;
+    letter-spacing:1px;
+    opacity:0.75;
+}
+
+@media(max-width:768px){
+    .gifts-stores{
+        grid-template-columns:1fr;
+    }
+    .gifts-card{
+        padding:60px 25px;
+    }
+}
+
+/* MESSAGE ELEGANT SECTION */
+
+.rsvp-form{
+    margin-top:35px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.rsvp-form input{
+    width:100%;
+    max-width:350px;
+    border:none;
+    border-bottom:1px solid #6E7F5F;
+    background:transparent;
+    padding:10px 0;
+    font-family:'Cormorant Garamond', serif;
+    font-size:16px;
+    outline:none;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.rsvp-form button{
+    padding:12px 40px;
+    background:#6E7F5F;
+    color:white;
+    border:none;
+    letter-spacing:2px;
+    font-size:13px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.rsvp-form button:hover{
+    background:#5b6b4f;
+}
+
+
+.location-section,
+.dresscode-section,
+.gifts-section,
+.message-elegant-section{
+    padding:50px 20px; 
+}
+
+.gallery-section{
+    padding:50px 0; 
+}
+
+.message-elegant-section{
+    padding:50px 20px 30px 20px;
+}
+
+#home {
+    scroll-margin-top: 100px;
+}
+
+/* INDICAÇÕES */
+
+.indicacoes-wrapper{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+.indicacao-card{
+    background:#ffffff;
+    border:1px solid #6E7F5F;
+    padding:25px;
+    text-align:center;
+    text-decoration:none;
+    color:#4F5D44;
+    transition:.3s;
+}
+
+.indicacao-card:hover{
+    background:#6E7F5F;
+    color:white;
+    transform:translateY(-5px);
+}
+
+.indicacao-card h4{
+    margin-bottom:8px;
+    letter-spacing:1px;
+    font-size:16px;
+}
+
+.indicacao-title{
+    margin-top:50px;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.indicacao-card{
+    background:#fff;
+    border:1px solid #6E7F5F;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    color:#4F5D44;
+}
+.indicacoes-wrapper{
+    display:grid;
+    grid-template-columns:repeat(3, 220px);
+    gap:20px;
+    justify-content:center;
+}
+
+/* quando houver 4 itens, o último vai para o meio */
+.indicacoes-wrapper a:nth-child(4){
+    grid-column:2;
+}
+
+.indicacoes-wrapper{
+    margin-top:40px;
+
+    display:grid;
+    grid-template-columns:repeat(3, 220px);
+
+    gap:20px;
+
+    justify-content:center; /* centraliza o grid */
+}
+
+.indicacao-card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:4px;
+    margin-bottom:12px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+        <a href="#home">HOME</a>
+        <a href="#prewedding">PRÉ-WEDDING</a>
+        <a href="#message">PRESENÇA</a>
+        <a href="#fotos">FOTOS</a>
+        <a href="#casamento">O CASAMENTO</a>
+        <a href="#dresscode">DICAS</a>
+        <a href="#presentes">PRESENTES</a>
+    </nav>
+</header>
+
+
+</header>
+
+<section id="home" class="hero">
+
+    <div class="names">Juliana e João Pedro</div>
+
+    <!-- Container da máscara radial -->
+    <div class="mask">
+        <img src="assets/aquarela.png" alt="Ilustração casamento">
+    </div>
+</section>
+
+
+
+<section id="prewedding" class="prewedding-banner">
+    <div class="prewedding-tag">EVENTO ESPECIAL</div>
+    <h2 class="prewedding-title">Pré-Wedding</h2>
+    <p class="prewedding-date">SEXTA-FEIRA · 28 DE AGOSTO DE 2026 · A PARTIR DAS 18H</p>
+    <div class="prewedding-local">Grano Doc</div>
+    <p class="prewedding-call">
+        Vamos celebrar juntos antes do grande dia!<br>
+        contamos com você.
+    </p>
+</section>
+
+<section class="message" class="message" id="message">
+
+    <h3>QUERIDOS AMIGOS E FAMILIARES,</h3>
+
+    <p>
+        Criamos este site com carinho para compartilhar os detalhes do nosso casamento.
+        Estamos muito felizes em dividir esse momento especial com vocês
+        e esperamos encontrá-los no grande dia.
+    </p>
+
+    <!-- CONFIRMAÇÃO DE PRESENÇA -->
+<form class="rsvp-form" id="rsvpForm">
+
+    <input
+        type="text"
+        id="nomeInput"
+        name="Nome"
+        placeholder="Digite seu nome completo"
+        required
+    >
+
+    <button type="submit">CONFIRMAR PRESENÇA</button>
+
+</form>
+
+<div id="rsvpSuccess" style="display:none; margin-top:25px; text-align:center;">
+    <p style="font-size:15px; color:#6E7F5F; letter-spacing:1px; line-height:1.8;">
+        ✓ Presença confirmada!<br>
+        <span style="font-size:13px; opacity:0.8;">Estamos felizes em contar com você nesse dia especial.</span>
+    </p>
+</div>
+
+</section>
+
+
+<section class="countdown-wrapper">
+
+    <div class="countdown-title">
+        EM CONTAGEM REGRESSIVA PARA O GRANDE DIA
+    </div>
+
+    <div class="countdown" id="countdown">
+    00d : 00h : 00m : 00s
+</div>
+
+
+<section id="fotos" class="gallery-section">
+
+
+
+    <div class="gallery-container">
+
+        <button class="arrow left" onclick="scrollGallery(-1)">❮</button>
+
+        <div class="gallery" id="gallery">
+            <img src="assets/foto1.jpeg" alt="">
+            <img src="assets/foto2.jpeg" alt="">
+            <img src="assets/foto3.jpeg" alt="">
+            <img src="assets/foto4.jpeg" alt="">
+            <img src="assets/foto6.jpeg" alt="">
+            <img src="assets/foto7.jpeg" alt="">
+            <img src="assets/foto8.jpeg" alt="">
+            <img src="assets/foto9.jpeg" alt="">
+            <img src="assets/foto10.jpeg" alt="">
+            <img src="assets/foto11.jpeg" alt="">
+        </div>
+
+        <button class="arrow right" onclick="scrollGallery(1)">❯</button>
+
+    </div>
+
+</section>
+
+<section id="casamento" class="location-section">
+
+
+    <div class="location-container">
+
+        <h2 class="location-title">O GRANDE DIA</h2>
+
+        <div class="location-date">
+            29 AGOSTO | 2026
+        </div>
+
+        <div class="location-place">
+            Fazenda Lumiar
+        </div>
+
+        <div class="location-address">
+            Barbacena - Minas Gerais
+        </div>
+
+        <a href="https://maps.app.goo.gl/6NrV5donFzSqXyQt8" 
+           target="_blank" 
+           class="location-button">
+           COMO CHEGAR
+        </a>
+
+    </div>
+
+</section>
+
+<section id="dresscode" class="dresscode-section">
+
+
+    <div class="dresscode-card">
+
+        <img src="assets/flor.png" class="floral-detail" alt="">
+
+        <div class="dresscode-content">
+
+            <h2 class="dresscode-script">Traje</h2>
+            <div class="dresscode-subtitle">PASSEIO COMPLETO</div>
+
+            <div class="dresscode-block">
+                <h3>PARA AS MULHERES</h3>
+                <p>
+                    Sugerimos vestido longo ou midi.
+                    O casamento se estenderá até a noite, quando as temperaturas são mais
+                    amenas. Saltos grossos são bem-vindos, já que a cerimônia acontecerá em um jardim.
+                </p>
+            </div>
+
+            <div class="dresscode-block">
+                <h3>PARA OS HOMENS</h3>
+                <p>
+                    Sugerimos terno, camisa com gravata e sapato social.
+                </p>
+            </div>
+
+            <img src="assets/trajes.png" class="dresscode-illustration" alt="">
+<h3 class="indicacao-title">HOTÉIS EM BARBACENA</h3>
+
+<div class="indicacoes-wrapper">
+
+<a href="https://www.instagram.com/ibisbudgetbarbacena" target="_blank" class="indicacao-card">
+<h4>Ibis Budget</h4>
+<p>@ibisbudgetbarbacena</p>
+</a>
+
+<a href="https://www.instagram.com/lucapehotel" target="_blank" class="indicacao-card">
+<h4>Lucape Hotel</h4>
+<p>@lucapehotel</p>
+</a>
+
+<a href="https://www.instagram.com/masterplazahotel" target="_blank" class="indicacao-card">
+<h4>Master Plaza</h4>
+<p>@masterplazahotel</p>
+</a>
+
+</div>
+
+
+<h3 class="indicacao-title">MAKE & HAIR</h3>
+
+<div class="indicacoes-wrapper">
+
+<a href="https://www.instagram.com/fernandagrievers" target="_blank" class="indicacao-card">
+<h4>Fernanda Grievers</h4>
+<p>@fernandagrievers</p>
+</a>
+
+<a href="https://www.instagram.com/camilafurtadomakeup" target="_blank" class="indicacao-card">
+<h4>Camila Furtado</h4>
+<p>@camilafurtadomakeup</p>
+</a>
+
+<a href="https://www.instagram.com/eufernandocoelho" target="_blank" class="indicacao-card">
+<h4>Fernando Coelho</h4>
+<p>@eufernandocoelho</p>
+</a>
+
+<a href="https://www.instagram.com/paulolisboamake" target="_blank" class="indicacao-card">
+<h4>Paulo Lisboa</h4>
+<p>@paulolisboamake</p>
+</a>
+
+</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="presentes" class="gifts-section">
+
+
+    <div class="gifts-card">
+
+        <div class="gifts-content">
+
+            <h2 class="gifts-script">Lista de Presentes</h2>
+
+            <div class="gifts-subtitle">
+                CLIQUE ABAIXO PARA ACESSAR
+            </div>
+
+            <p class="gifts-text">
+                Preparamos nossa lista com muito carinho.
+                Sua presença é o mais importante para nós,
+                mas se desejar nos presentear, ficaremos imensamente felizes.
+            </p>
+
+            <div class="gifts-stores">
+
+                <a href="https://presentes.lavillecasa.com.br/lista/Julianaejoaopedro"
+                   target="_blank"
+                   class="gifts-store-card">
+                    <img src="assets/laville.png" alt="La Ville Casa" class="gifts-store-img">
+                    <div class="gifts-store-info">
+                        <h4>La Ville Casa</h4>
+                        <p>LISTA ONLINE</p>
+                    </div>
+                </a>
+
+                <a href="https://m.camicado.com.br/lista/convidado/julianaejoaopedro"
+                   target="_blank"
+                   class="gifts-store-card">
+                    <img src="assets/camicado.png" alt="Camicado" class="gifts-store-img">
+                    <div class="gifts-store-info">
+                        <h4>Camicado</h4>
+                        <p>LISTA ONLINE</p>
+                    </div>
+                </a>
+
+                <a href="#" class="gifts-store-card">
+                    <img src="assets/plataformaz.jpeg" alt="Loja Presencial Barbacena" class="gifts-store-img">
+                    <div class="gifts-store-info">
+                        <h4>Loja Presencial</h4>
+                        <p>BARBACENA</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</section>
+
+<footer>
+    João Pedro & Juliana © 2026
+</footer>
+
+<script>
+
+// ===== GALERIA =====
+function scrollGallery(direction) {
+    const gallery = document.getElementById("gallery");
+    const scrollAmount = 320;
+    gallery.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+    });
+}
+
+// ===== CONTAGEM REGRESSIVA =====
+const countdownElement = document.getElementById("countdown");
+
+// Data do casamento
+const weddingDate = new Date("August 29, 2026 15:00:00").getTime();
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+        countdownElement.innerHTML = "O GRANDE DIA CHEGOU!";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML =
+        `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+}
+
+// Atualiza a cada 1 segundo
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ===== CONFIRMAÇÃO DE PRESENÇA =====
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwibNyMriXxlrfBtqDpotDYf0JYMmLMWi4iMIBJizRebsRANEjhhGvnD6qma-JBVKxT/exec";
+
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nomeInput").value.trim();
+    if (!nome) return;
+
+    const btn = this.querySelector("button");
+    btn.textContent = "ENVIANDO...";
+    btn.disabled = true;
+
+    fetch(SCRIPT_URL + "?Nome=" + encodeURIComponent(nome), {
+        method: "GET",
+        mode: "no-cors"
+    })
+        .then(() => {
+            document.getElementById("rsvpForm").style.display = "none";
+            document.getElementById("rsvpSuccess").style.display = "block";
+        })
+        .catch(() => {
+            // mesmo com erro de CORS o envio chega, mostra sucesso
+            document.getElementById("rsvpForm").style.display = "none";
+            document.getElementById("rsvpSuccess").style.display = "block";
+        });
+});
+
+function toggleMenu(){
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("active");
+}
+
+const navLinks = document.querySelectorAll("#nav a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        const nav = document.getElementById("nav");
+        // Remove a classe 'active' para fechar o menu
+        nav.classList.remove("active");
+        // Opcional: rolar suavemente para a seção
+        const targetId = link.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+        if(targetSection){
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+
+</script>
+
+
+
+
+</body>
+</html>
+
