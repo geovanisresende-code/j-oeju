@@ -696,17 +696,25 @@ footer{
 
 /* INDICAÇÕES */
 
+.indicacao-title{
+    margin-top:50px;
+    letter-spacing:2px;
+    font-size:14px;
+    text-align:center;
+}
+
 .indicacoes-wrapper{
-    margin-top:60px;
+    margin-top:30px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    justify-content:center;
 }
 
 .indicacao-card{
-    background:#ffffff;
+    background:#fff;
     border:1px solid #6E7F5F;
-    padding:25px;
+    padding:20px;
     text-align:center;
     text-decoration:none;
     color:#4F5D44;
@@ -725,41 +733,9 @@ footer{
     font-size:16px;
 }
 
-.indicacao-title{
-    margin-top:50px;
-    letter-spacing:2px;
-    font-size:14px;
-}
-
-.indicacao-card{
-    background:#fff;
-    border:1px solid #6E7F5F;
-    padding:20px;
-    text-align:center;
-    text-decoration:none;
-    color:#4F5D44;
-}
-.indicacoes-wrapper{
-    display:grid;
-    grid-template-columns:repeat(3, 220px);
-    gap:20px;
-    justify-content:center;
-}
-
-/* quando houver 4 itens, o último vai para o meio */
-.indicacoes-wrapper a:nth-child(4){
-    grid-column:2;
-}
-
-.indicacoes-wrapper{
-    margin-top:40px;
-
-    display:grid;
-    grid-template-columns:repeat(3, 220px);
-
-    gap:20px;
-
-    justify-content:center; /* centraliza o grid */
+.indicacao-card p{
+    font-size:13px;
+    opacity:0.8;
 }
 
 .indicacao-card img{
@@ -768,6 +744,27 @@ footer{
     object-fit:cover;
     border-radius:4px;
     margin-bottom:12px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .indicacoes-wrapper{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    /* 4º item (Make & Hair) centralizado */
+    .indicacoes-wrapper a:nth-child(4){
+        grid-column: 1 / -1;
+        max-width:calc(50% - 10px);
+        margin:0 auto;
+    }
+
+    /* 3º item (Hotéis) quando for ímpar, centraliza */
+    .indicacoes-wrapper.tres-itens a:nth-child(3){
+        grid-column: 1 / -1;
+        max-width:calc(50% - 10px);
+        margin:0 auto;
+    }
 }
 
 
@@ -949,7 +946,7 @@ footer{
             <img src="assets/trajes.png" class="dresscode-illustration" alt="">
 <h3 class="indicacao-title">HOTÉIS EM BARBACENA</h3>
 
-<div class="indicacoes-wrapper">
+<div class="indicacoes-wrapper tres-itens">
 
 <a href="https://www.instagram.com/ibisbudgetbarbacena" target="_blank" class="indicacao-card">
 <h4>Ibis Budget</h4>
