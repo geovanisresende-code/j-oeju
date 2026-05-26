@@ -749,21 +749,7 @@ footer{
 /* Mobile */
 @media(max-width:768px){
     .indicacoes-wrapper{
-        grid-template-columns:repeat(2, 1fr);
-    }
-
-    /* 4º item (Make & Hair) centralizado */
-    .indicacoes-wrapper a:nth-child(4){
-        grid-column: 1 / -1;
-        max-width:calc(50% - 10px);
-        margin:0 auto;
-    }
-
-    /* 3º item (Hotéis) quando for ímpar, centraliza */
-    .indicacoes-wrapper.tres-itens a:nth-child(3){
-        grid-column: 1 / -1;
-        max-width:calc(50% - 10px);
-        margin:0 auto;
+        grid-template-columns:1fr;
     }
 }
 
