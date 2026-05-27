@@ -123,13 +123,17 @@ nav a:hover{
     nav.active{
         display:flex;
     }
-.hero{
-    text-align:center;
-    padding-top:40px;
-    margin-top: 60px;
-}
-  
 
+    .hero{
+        text-align:center;
+        padding-top:20px;
+        margin-top:60px;
+        min-height:calc(100vh - 80px);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
 
 }
 
@@ -837,7 +841,7 @@ footer{
 <section id="prewedding" class="prewedding-banner">
     <div class="prewedding-tag">EVENTO ESPECIAL</div>
     <h2 class="prewedding-title">Pré-Wedding</h2>
-    <p class="prewedding-date">SEXTA-FEIRA · 28 DE AGOSTO DE 2026 · A PARTIR DAS 18H</p>
+    <p class="prewedding-date">SEXTA-FEIRA · 28 DE AGOSTO DE 2026<br>A PARTIR DAS 18H</p>
     <div class="prewedding-local">Grano Doc</div>
     <p class="prewedding-call">
         Vamos celebrar juntos antes do grande dia!<br>
@@ -863,7 +867,6 @@ footer{
             <img src="assets/foto8.jpeg" alt="">
             <img src="assets/foto9.jpeg" alt="">
             <img src="assets/foto10.jpeg" alt="">
-            <img src="assets/foto11.jpeg" alt="">
         </div>
 
         <button class="arrow right" onclick="scrollGallery(1)">❯</button>
